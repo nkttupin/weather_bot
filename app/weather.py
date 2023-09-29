@@ -8,7 +8,7 @@ load_dotenv()
 
 
 async def fetch_weather_data():
-    url = f"https://api.openweathermap.org/data/2.5/weather?lat=58.60472&lon=49.65642&appid={os.getenv('BOT_TOKEN')}"
+    url = f"https://api.openweathermap.org/data/2.5/weather?lat=58.60472&lon=49.65642&appid={os.getenv('OPEN_WEATHER_TOKEN')}"
 
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
